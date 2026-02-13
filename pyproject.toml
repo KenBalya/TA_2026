@@ -4,8 +4,7 @@ version = "0.1.0"
 description = "Representasi Pengetahuan Prosedural dan Reasoning Terstruktur untuk Video dalam Sistem Multimodal Retrieval-Augmented Generation"
 authors = ["Ken <kenbalya27@gmail.com>"]
 readme = "README.md"
-packages = [{ include = "src" }]
-
+packages = [{ include = "core", from = "src" }]
 [tool.poetry.dependencies]
 python = "^3.11"
 pydantic = "^2.7.0"
