@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "TA_2026"
+version = "0.1.0"
+description = "Representasi Pengetahuan Prosedural dan Reasoning Terstruktur untuk Video dalam Sistem Multimodal Retrieval-Augmented Generation"
+authors = ["Ken <kenbalya27@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.7.0"
+pydantic-settings = "^2.3.0"
+orjson = "^3.10.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+ruff = "^0.5.0"
+mypy = "^1.10.0"
+
+[tool.poetry.scripts]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+fix = true
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+ignore = ["E501"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+no_implicit_optional = true
+plugins = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
